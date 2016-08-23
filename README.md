@@ -37,4 +37,6 @@ docker run -it --rm --name dump -e "DB_USER=root" -e "DB_PASSWORD=XXXXXXX" -e "D
 
 * Allow specifying the region to use for the bucket, if it is created.
 * Provide a "dry-run" option to testing MySQL permissions and S3 permissions without actually doing the export.
+* Provide a mechanism to prune older dumps.
+* Provide option to use a storage class other than S3 standard.
 
