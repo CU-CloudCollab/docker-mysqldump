@@ -13,7 +13,7 @@ docker build -t dump .
 **Run the image**
 
 ```
-docker run -it --rm --name dump -e "DB_USER=root" -e "DB_PASSWORD=XXXXXXX" -e "DB_HOST=mydb.XXXXX.us-east-1.rds.amazonaws.com" -e "AWS_PROFILE=my-aws-profile" -e "BUCKET=my-project-bucket" -e "DB_NAME=my-db" -v ~/.aws:/root/.aws dump bash
+docker run -it --rm --name dump -e "DB_USER=root" -e "DB_PASSWORD=XXXXXXX" -e "DB_HOST=mydb.XXXXX.us-east-1.rds.amazonaws.com" -e "AWS_PROFILE=my-aws-profile" -e "BUCKET=my-project-bucket" -e "DB_NAME=my-db" -v ~/.aws:/root/.aws dump
 ```
 
 * Environment Variables Required
