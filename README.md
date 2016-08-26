@@ -1,4 +1,4 @@
-# docker-mysql-dump
+# docker-mysqldump
 
 A simple Docker container to dump the contents of a MySQL database (using mysqldump) and copy it into S3.
 
@@ -23,7 +23,7 @@ docker run -it --rm --name dump -e "DB_USER=root" -e "DB_PASSWORD=XXXXXXX" -e "D
   * DB_NAME - a label to associate with this backup
   * BUCKET - target S3 bucket
 * AWS CLI Environment Variables
-  * Any of the methods of specifying AWS CLI credentials (as discussed in [AWS documentation](https://blogs.aws.amazon.com/security/post/Tx3D6U6WSFGOK2H/A-New-and-Standardized-Way-to-Manage-Credentials-in-the-AWS-SDKs)). E.g., AWS_PROFILE, AWS_
+  * Any of the methods of specifying AWS CLI credentials (as discussed in [AWS documentation](https://blogs.aws.amazon.com/security/post/Tx3D6U6WSFGOK2H/A-New-and-Standardized-Way-to-Manage-Credentials-in-the-AWS-SDKs)). E.g., AWS_PROFILE or AWS_ACCESS_KEY_ID, etc.
 
 ## Implementation Notes
 
@@ -37,4 +37,6 @@ docker run -it --rm --name dump -e "DB_USER=root" -e "DB_PASSWORD=XXXXXXX" -e "D
 
 * Allow specifying the region to use for the bucket, if it is created.
 * Provide a "dry-run" option to testing MySQL permissions and S3 permissions without actually doing the export.
+* Provide a mechanism to prune older dumps.
+* Provide option to use a storage class other than S3 standard.
 
